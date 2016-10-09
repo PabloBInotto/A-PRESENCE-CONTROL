@@ -143,25 +143,15 @@ v0 . 12 . 9
 
 2 . 14 . 9 // Vai obter algo parecido com isso.
 
-Agora crie a pasta rfid digitando:
+Abra o phpmyadmin em http://localhost:8080/phpmyadmin/ no pc que você instalou o xampp e crie as tabelas usando os códigos sql.sql;
 
-~$ cd // para voltar a pasta raiz
-
-~$ mkdir rfid // para criar a pasta
+Se você baixou o projeto, entre na pasta rfid para instalar os modulos que o node js usa no projeto:
 
 ~$ cd rfid // para entrar na pasta
 
-Agora vamos instalar as dependências para o projeto dentro da pasta rfid
+Agora vamos instalar os modulos dentro da pasta rfid digitando:
 
-~$ npm install express
-
-~$ npm install pcsclite
-
-~$ npm install socket.io
-
-~$ npm install mysql
-
-Abra o phpmyadmin em http://localhost:8080/phpmyadmin/ no pc que você instalou o xampp e crie as tabelas usando os códigos sql.sql;
+~$ npm install
 
 Com leitor RFID ACR122U tudo conectado no raspberry, digite os códigos abaixo, vamos testar se tudo deu certo:
 
