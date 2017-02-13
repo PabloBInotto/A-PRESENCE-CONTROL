@@ -19,6 +19,14 @@ Para exibir  as respostas no nosso sistema.
 
 * após digitar os códigos digite enter
 
+~$ sudo apt-get install libpcsclite1
+~$ sudo apt-get install libpcsclite-dev
+~$ sudo apt-get install pcscd
+~$ sudo apt-get install pcsctools
+~$ sudo apt-get install libusb-0.1-4
+~$ sudo apt-get install libusb-dev
+~$ sudo apt-get install libusb-1.0.0-dev
+
 Agora o driver para o dispositivo de leitura ACR122u:
 
 http://www.acs.com.hk/download-driver-unified/6258/ACS-Unified-Driver-Lnx-Mac-108-P.zip.unzip
