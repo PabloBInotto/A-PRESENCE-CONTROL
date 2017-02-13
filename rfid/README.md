@@ -153,21 +153,11 @@ v0 . 12 . 9
 
 Agora crie a pasta rfid digitando:
 
-~$ cd // para voltar a pasta raiz
+~$ sudo git clone https://github.com/PabloBInotto/A-PRESENCE-CONTROL.git
 
-~$ mkdir rfid // para criar a pasta
+~$ cd /A-PRESENCE-CONTROL/rfid // para entrar na pasta
 
-~$ cd rfid // para entrar na pasta
-
-Agora vamos instalar as dependências para o projeto dentro da pasta rfid
-
-~$ npm install express
-
-~$ npm install pcsclite
-
-~$ npm install socket.io
-
-~$ npm install mysql
+~$ npm install
 
 Abra o phpmyadmin em http://localhost:8080/phpmyadmin/ no pc que você instalou o xampp e crie as tabelas usando os códigos sql.sql;
 
