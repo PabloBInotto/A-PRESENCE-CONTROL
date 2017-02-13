@@ -151,7 +151,7 @@ v0 . 12 . 9
 
 2 . 14 . 9 // Vai obter algo parecido com isso.
 
-Agora crie a pasta rfid digitando:
+para baixar o arquivo digite:
 
 ~$ sudo git clone https://github.com/PabloBInotto/A-PRESENCE-CONTROL.git
 
