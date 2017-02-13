@@ -175,7 +175,7 @@ Com leitor RFID ACR122U tudo conectado no raspberry, digite os códigos abaixo, 
 
 ~$ cd rfid
 
-~$ node sv-http
+~$ node sv.js
 
  4º Abra o navegador e acesse  o html que criamos por ultimo, a pagina que vai exibir que esta presente ou ausente. No vavegador digite: http://localhost:8000
 
