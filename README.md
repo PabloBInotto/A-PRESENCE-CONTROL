@@ -146,13 +146,17 @@ v0 . 12 . 9
 
 2 . 14 . 9 // Vai obter algo parecido com isso.
 
+Copie a pasta raspberry para o seu raspberry pi:
+~$ git clone https://github.com/PabloBInotto/A-PRESENCE-CONTROL.git
+
+Faça o download da pasta Server Files para o seu servidor (www, htdocs, etc):
+
+https://github.com/PabloBInotto/A-PRESENCE-CONTROL/archive/master.zip
+
+
 Abra o phpmyadmin em http://localhost:8080/phpmyadmin/ no pc que você instalou o xampp e crie as tabelas usando os códigos sql.sql;
 
-Se você baixou o projeto, entre na pasta rfid para instalar os modulos que o node js usa no projeto:
-
-~$ cd rfid // para entrar na pasta
-
-Agora vamos instalar os modulos dentro da pasta rfid digitando:
+Agora vamos instalar os modulos dentro da pasta raspberryFiles digitando:
 
 ~$ npm install
 
@@ -162,15 +166,11 @@ Com leitor RFID ACR122U tudo conectado no raspberry, digite os códigos abaixo, 
 
 2º  Inicie o middleware new.js que será responsável pela leitura e gravação dos códigos rfid das tags no mysql:
 
-~$ cd rfid
-
 ~$ node new
 
 3º Em um outro terminal inicie o servidor http do node:
 
-~$ cd rfid
-
-~$ node sv-http
+~$ node sv
 
  4º Abra o navegador e acesse  o html que criamos por ultimo, a pagina que vai exibir que esta presente ou ausente. No vavegador digite: http://localhost:8000
 
