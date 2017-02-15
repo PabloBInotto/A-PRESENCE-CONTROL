@@ -121,6 +121,9 @@ explica como instalar o xampp e nesse outro:
 https://www.youtube.com/watch?v=3ADH79DDAXo
 como configurar usuário e dar permissões.
 
+Aqui como configurar o acesso remoto ao servidor:
+https://www.youtube.com/watch?v=HnnrUoxk--s
+
 Vamos instalar o nodejs!
 
 ~$ curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash –
