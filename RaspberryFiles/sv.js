@@ -25,7 +25,7 @@ connection.connect(function(err) {
 app.listen(8000);
  
 function handler(req, res) {
- fs.readFile(__dirname + '/show.html', function(err, data) {
+ fs.readFile(__dirname + '/index.html', function(err, data) {
  if (err) {
  console.log(err);
  res.writeHead(500);
