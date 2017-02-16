@@ -1,25 +1,41 @@
 {
   "name": "rfid-acr122u-node.js-soquet.io",
-  "version": "1.0.0",
-  "description" : "Realizar controle de presença de funcionários, alunos, etc. utilzando tecnologia rfid",
-  "author": "Pablo_Binotto",
-  "email" : "binhotto1978@gmail.com",
-  "license": "ISC",
+  "version": "0.0.1",
+  "description": "Realizar controle de presença de funcionários, alunos, etc. utilzando tecnologia rfid",
+
   "repository": {
     "type": "git",
     "url": "https://github.com/PabloBInotto/CONTROLE-DE-PRESEN-A-COM-RASPBERRY-NODE-JS-MYSQL-SOCKET.IO-ACR122U"
   },
+
+  "keywords": [
+    "pcsc",
+    "pcsc-lite",
+    "rfid",
+    "nfc",
+    "http",
+    "rest"
+  ],
+
+  "author": "PabloBInotto Srl <binhotto1978@gmail.com>",
+  "license": "ISC",
+
   "bugs": {
     "url": "https://github.com/PabloBInotto/CONTROLE-DE-PRESEN-A-COM-RASPBERRY-NODE-JS-MYSQL-SOCKET.IO-ACR122U/issues"
   },
+
   "homepage": "http://pablo.dellaotto.com.br/2016/03/26/controle-de-presenca-com-raspberry-node-js-mysql-socket-io-acr122u/",
-  
+
+  "devDependencies": {
+    "cors": "^2.7.1",
+    "express": "^4.12.4",
+    "pcsclite": "^0.4.0"
+  },
   "dependencies": {
-    "express": "4.14.0",
-	"socket.io": "1.5.0",
-	"mysql": "2.11.1",
-	"pcsclite": "0.4.10"
-	
+    "mongodb": "^2.2.24",
+    "mysql": "2.11.1",
+    "progress": "^1.1.8",
+    "progressbar": "^1.1.1",
+    "socket.io": "^1.4.5"
   }
-  
 }
