@@ -73,7 +73,7 @@ var lastRead = data.readUIntBE(0, 6, true).toString(16);
 var post = {evento: lastRead};
 var sql = connection.query('SELECT COUNT (*) AS tt FROM `event` WHERE `rfid` = ?', lastRead, function(err, rows, results){
 if (err)throw err;
-if (rows[0].tt & lt; 1){
+if (rows[0].tt < 1){
 console.log(lastRead + ' Nao resgistrado');
 }else{
 var query = connection.query('INSERT INTO ck SET ?', post, function(err, resuslt){
