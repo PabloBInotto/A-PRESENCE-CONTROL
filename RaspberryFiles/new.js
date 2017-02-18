@@ -1,28 +1,28 @@
 'use strict';
-var pcsc = require('pcsclite');
-var mysql = require('mysql'),
-connectionsArray = [],
-connection = mysql.createConnection({
-host : 'servidor',
-user : 'sua_sebha',
-password : '123456',
-database : 'sua_base_de_dados'
+ var pcsc = require('pcsclite');
+ var mysql = require('mysql'),
+ connectionsArray = [],
+ connection = mysql.createConnection({
+ host : 'servidor',
+ user : 'sua_sebha',
+ password : '123456',
+ database : 'sua_base_de_dados'
 });
  
 // If there is an error connecting to the database
-connection.connect(function(err) {
+ connection.connect(function(err) {
 // connected! (unless `err` is set)
  if (err) {
  console.log(err);
  }
 });
  
-var pcsc = pcsc();
+ var pcsc = pcsc();
 // PC/SC interface.
-pcsc.on('reader', function(reader) {
-console.log('Reader detected:', reader);
-reader.on('error', function(err) {
-console.log('Error(', reader.name, '):', err.message);
+ pcsc.on('reader', function(reader) {
+ console.log('Reader detected:', reader);
+ reader.on('error', function(err) {
+ console.log('Error(', reader.name, '):', err.message);
 });
 reader.on('status', function(status) {
 console.log('Status(', reader.name, '):', status);
@@ -30,7 +30,7 @@ console.log('Status(', reader.name, '):', status);
 var changes = this.state ^ status.state;
 if (changes) {
 // Card removed.
-if ((changes &amp;amp; this.SCARD_STATE_EMPTY) &amp;amp;&amp;amp; (status.state &amp;amp; this.SCARD_STATE_EMPTY)) {
+if ((changes & this.SCARD_STATE_EMPTY) && (status.state & this.SCARD_STATE_EMPTY)) {
 console.log('Status(', reader.name, '): Card removed');
 reader.disconnect(reader.SCARD_LEAVE_CARD, function(err) {
 if (err) {
@@ -42,7 +42,7 @@ console.log('Status(', reader.name, '): Disconnected');
 });
 }
 // Card inserted.
-else if ((changes &amp;amp; this.SCARD_STATE_PRESENT) &amp;amp;&amp;amp; (status.state &amp;amp; this.SCARD_STATE_PRESENT)) {
+else if ((changes & this.SCARD_STATE_PRESENT) && (status.state & this.SCARD_STATE_PRESENT)) {
 console.log('Status(', reader.name, '): Card inserted');
 reader.connect({ share_mode : this.SCARD_SHARE_SHARED }, function(err, protocol) {
 if (err) {
@@ -73,7 +73,7 @@ var lastRead = data.readUIntBE(0, 6, true).toString(16);
 var post = {evento: lastRead};
 var sql = connection.query('SELECT COUNT (*) AS tt FROM `event` WHERE `rfid` = ?', lastRead, function(err, rows, results){
 if (err)throw err;
-if (rows[0].tt &amp;lt; 1){
+if (rows[0].tt & lt; 1){
 console.log(lastRead + ' Nao resgistrado');
 }else{
 var query = connection.query('INSERT INTO ck SET ?', post, function(err, resuslt){
