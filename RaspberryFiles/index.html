@@ -5,7 +5,7 @@
  <title>Controle de presença</title>
  <meta name="description" content="">
  <meta name="author" content="revaxarts.com">
-  <script type="text/javascript" src="http://servidor/eesh/js/jquery-1.12.1.min.js"></script>
+  <script type="text/javascript" src="http://localhost/js/jquery-3.1.1.min.js"></script>
  <style type="text/css">
  #teste{
  width:250px;
@@ -68,7 +68,7 @@ th, td {
  <script src="socket.io/socket.io.js"></script>
  <script>
  // create a new websocket
- var socket = io.connect('http://servidor:8000');
+ var socket = io.connect('http://localhost:8000');
  // on message received we print all the data inside the #box div
  socket.on('notification', function (data) {
   
