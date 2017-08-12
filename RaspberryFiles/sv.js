@@ -7,7 +7,7 @@ var app = require('http').createServer(handler),
  host: 'servidor',
  user: 'root',
  password: '',
- database: 'eesh',
+ database: 'database',
  port: 3306
  }),
  POLLING_INTERVAL = 50,
