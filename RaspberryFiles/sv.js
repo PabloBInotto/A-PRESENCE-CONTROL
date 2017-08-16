@@ -8,7 +8,8 @@ var app = require('http').createServer(handler),
  user: 'root',
  password: '',
  database: 'database',
- port: 3306
+ port: 3306,
+ _socket: '/var/run/mysqld/mysqld.sock',
  }),
  POLLING_INTERVAL = 50,
  pollingTimer;
