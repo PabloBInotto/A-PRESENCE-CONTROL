@@ -6,7 +6,9 @@
  host : 'servidor',
  user : 'sua_sebha',
  password : '123456',
- database : 'sua_base_de_dados'
+ database : 'sua_base_de_dados',
+ port: 3306,
+ _socket: '/var/run/mysqld/mysqld.sock',
 });
  
 // If there is an error connecting to the database
