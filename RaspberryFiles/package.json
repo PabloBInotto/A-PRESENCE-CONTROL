@@ -32,10 +32,11 @@
     "pcsclite": "^0.4.0"
   },
   "dependencies": {
-    "mongodb": "^2.2.24",
+    "mongodb": ">=3.1.13",
     "mysql": "^2.14.0",
     "progress": "^1.1.8",
     "progressbar": "^1.1.1",
     "socket.io": ">=2.4.0"
   }
 }
+
